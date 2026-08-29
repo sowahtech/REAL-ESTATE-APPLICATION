@@ -2,12 +2,15 @@ import express from 'express'
 import cors from 'cors'
 import 'dotenv/config'
 import http from 'http'
+import { ConnectDB } from './config/db.js'
 
 
 const app = express()
 const PORT = 5000
 
 // DB
+
+ConnectDB()
 
 // Middlewares
 app.use(cors())
